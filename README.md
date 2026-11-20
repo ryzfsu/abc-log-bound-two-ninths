@@ -6,9 +6,9 @@ This package formalizes Theorem 1.1 of the companion paper (see [Citation](#cita
 For every real $`\varepsilon>0`$, there is a real $`C>0`$ such that all positive
 coprime integers $`a,b`$, with $`a+b=c`$, satisfy
 
-$$
+```math
 \log\, c \leq C\,\mathrm{rad}(abc)^{2/9+\varepsilon}.
-$$
+```
 
 The radical is the product of the distinct prime factors. This estimate concerns
 the logarithm of $`c`$. The abc conjecture itself remains open.
