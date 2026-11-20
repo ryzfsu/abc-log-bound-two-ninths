@@ -1,0 +1,81 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "An upper bound for log c in the abc conjecture with exponent 2/9"
+  description: >-
+    For every positive real epsilon, there is a positive constant C such that
+    log c is at most C times rad(abc) to the power 2/9 + epsilon whenever
+    a and b are positive coprime integers and a + b = c. The radical is the
+    product of the distinct prime factors. This is an upper bound for log c.
+    The abc conjecture itself remains open.
+  authors: ["Ruiyi Zhang"]
+  license: "Apache-2.0"
+  responsible_maintainers: ["Ruiyi Zhang"]
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11D75", "11J86"]
+
+sources:
+  - title: "An upper bound for log c in the abc conjecture with exponent 2/9"
+    authors: ["Ruiyi Zhang"]
+    type: "paper"
+    license: "CC-BY-4.0"
+    location: "https://github.com/ryzfsu/abc-log-bound-two-ninths/blob/main/main.pdf"
+    relationship: "formalizes"
+    note: "Theorem 1.1 of the companion manuscript. The citation identifier is pending publication."
+    author_endorsement: "participated"
+
+related_formalizations: []
+
+status:
+  scope: >-
+    Solution proves the full uniform statement of Theorem 1.1. PaperMap links
+    the twelve section-numbered results to their Lean declarations. The sole
+    placeholder is the independent theorem statement in Challenge.lean.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["GPT-6 Astra", "Gemini 4 Neon", "Claude Fable 5"]
+      framework: "Codex, Antigravity and Claude Code"
+      tool_setup: >-
+        The author devised the method of proof. Codex (OpenAI, GPT-6 Astra)
+        and Antigravity (Google, Gemini 4 Neon) ran blind reviews of the
+        manuscript, and Codex assisted with the Lean formalization. Claude
+        Code (Anthropic, Claude Fable 5) checked the proofs and the references.
+        The author checked every step of the proof and every reference, and
+        takes full responsibility for the content of the paper.
+  notes: "Build verification uses Lean and Mathlib at the pinned revisions."
+
+fidelity:
+  divergences: >-
+    The statements of the principal results match. Section 2 cites
+    Stewart--Yu for the global cap; the formal proof derives it from a
+    support-sensitive arithmetic bound. Sections 3 and 4 cite a local estimate
+    recorded in the author's earlier 1/3 result; the formal proofs use a real
+    two-logarithm estimate and a composite-modulus exclusion, respectively.
+    Section 6 cites a p-adic two-logarithm estimate and a lattice minima
+    theorem; the formal proof supplies its own local estimate and basis
+    reduction. Further differences are listed in the README.
+
+review:
+  status: "author-verified"
+  reviewers: ["Ruiyi Zhang"]
+  notes: >-
+    AI readings also compared the formalized statement and proof structure
+    with the manuscript. The verification script checks the theorem type,
+    the three statement definitions and the solution's axiom report.
+
+alignment:
+  namespace: "AbcTwoNinths"
+  statements:
+    - source: "Theorem 1.1"
+      lean: "AbcTwoNinths.twoNinths"
+      module: "Solution"
+      status: "proved"
+      note: "Solution proves the stated theorem with the definitions in AbcTwoNinths.Statement."

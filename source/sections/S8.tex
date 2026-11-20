@@ -1,0 +1,38 @@
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:end}
+\begin{proposition}\label{lem:tail}
+Suppose each $\eta$ admits a pair $\sigma,\kappa$ in
+Table~\ref{tab:parameters} with the following property. Both exterior
+bounds hold for ordered triples satisfying \eqref{eq:high} for sufficiently
+large $x$. Suppose also that for each admissible $\eta,\sigma,\kappa$ some
+$\mathcal B_X$ is empty. Then for each such $\eta$ there is a threshold
+$X_\eta$ with
+\[
+                 H<R^{1/3-\eta}\qquad (x\ge X_\eta)
+\]
+for every triple.
+\end{proposition}
+\begin{proof}
+Fix the pair in the first hypothesis and take the larger of the exterior
+and exclusion thresholds for that pair. Exchanging $a,b$ preserves $x,H$.
+An ordered triple above this threshold satisfying \eqref{eq:high} would
+belong to the empty set $\mathcal B_X$.
+\end{proof}
+\begin{lemma}\label{lem:assembly}
+A uniform polynomial bound and the two hypotheses of
+Proposition~\ref{lem:tail} imply Theorem~\ref{thm:main}.
+\end{lemma}
+\begin{proof}
+Given $\eps>0$, choose $\eta$ as in Section~\ref{sec:cap} with
+$1/9-\eta<\eps$. For $x\ge X_\eta$ the last proposition gives
+$H<R^{1/3-\eta}\le R^{2/9+\eps}$. For $x<X_\eta$ use
+$H\le C_0R^k\le C_0\exp(3kX_\eta)$. Thus one may take
+$C_\eps=\max(1,C_0\exp(3kX_\eta))$.
+The exterior thresholds use the constants of Fact~\ref{fact:local}.
+The polynomial bound supplies $(C_0,k)$ independently.
+\end{proof}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Proposition~\ref{lem:cap} gives the polynomial bound. Use the pair
+in Proposition~\ref{lem:small} and apply Proposition~\ref{lem:real}
+at this same $\kappa$. Lemma~\ref{lem:empty} gives the exclusion.
+Lemma~\ref{lem:assembly} concludes the proof.
+\end{proof}

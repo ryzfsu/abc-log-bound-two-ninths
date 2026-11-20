@@ -1,0 +1,33 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{1}
+
+\bibitem{BL96}
+Y.~Bugeaud and M.~Laurent, \emph{Minoration effective de la distance
+  {$p$}-adique entre puissances de nombres alg{\'e}briques}, J. Number Theory
+  \textbf{61} (1996), no.~2, 311--342.
+
+\bibitem{Malikiosis2010}
+Romanos-Diogenes Malikiosis, \emph{A discrete analogue for {Minkowski}'s second
+  theorem on successive minima}, Adv. Geom. \textbf{12} (2012), no.~2,
+  365--380, The page and equation citation use the preprint,
+  \href{https://arxiv.org/abs/1001.3729v1}{arXiv:1001.3729v1}.
+
+\bibitem{RS62}
+J.~Barkley Rosser and Lowell Schoenfeld, \emph{Approximate formulas for some
+  functions of prime numbers}, Illinois J. Math. \textbf{6} (1962), 64--94.
+
+\bibitem{SY2001}
+C.~L. Stewart and Kunrui Yu, \emph{On the {$abc$} conjecture, {II}}, Duke Math.
+  J. \textbf{108} (2001), no.~1, 169--181.
+
+\bibitem{Zhang2026Third}
+Ruiyi Zhang, \emph{Improving the {Stewart--Yu} bound for all {$abc$} triples},
+  Zenodo, \url{https://doi.org/10.5281/zenodo.24202155}, November 2026.
+
+\end{thebibliography}

@@ -1,0 +1,154 @@
+\section{Two auxiliary primes}\label{sec:pair}
+For an odd prime $p$ and a finite set $T$ of other primes set
+\[
+ \beta(v)=\prod_{q\in T}q^{v_q},\qquad
+ \Lambda(T)=\{v\in\Z^T:\beta(v)\equiv\pm1\bmod p\}.
+\]
+For $v\in\Lambda(T)$ let $\chi(v)$ be the unique choice of
+$\pm\beta(v)$ congruent to $1\bmod p$. It is an injective homomorphism
+by unique factorization. Use the norm $\|v\|_w=\sum_{q\in T}|v_q|\log q$,
+also on coordinate subspaces. For $v_j\ne0$ write
+$\pi w=(w_q-w_jv_q/v_j)_{q\ne j}$.
+
+\begin{proposition}\label{lem:separate}
+For each admissible $\eta,\sigma,\kappa$ there exists $X>0$ such that
+for every triple in $\mathcal B_X$, the prime of Proposition~\ref{lem:sel} satisfies
+\[
+ p\ge5,\qquad (\lambda-6\nu)x\le\ell\le x,\qquad H>x^2,\qquad \log x\ge10^9.
+\]
+Let $T$ be the prime support of $z$. Some $v\in\Lambda(T)$ and
+$j\in T$ satisfy
+\[
+ \chi(v)=z,\quad |v_j|=\max_{q\in T}|v_q|>0,\quad H\le3x|v_j|,
+ \quad \Lambda(T)\cap\R v=\Z v.
+\]
+For $w\in\Lambda(T)$ either $\pi w=0$ or $\|\pi w\|_w\ge r$.
+\end{proposition}
+\begin{proof}
+Since $p>Y\ge\exp((\lambda-\sigma)x)$ and $p\le\rad(s)\le\exp(x)$,
+we have $(\lambda-\sigma)x<\ell\le x$ and $\ell\ge x/2$.
+Together with \eqref{eq:high} these give the stated bounds for large $x$.
+For $v_q=v_q(z)$ we have $\chi(v)=z$ since $v_p(1-z)=m$.
+The absolute numerator and denominator of $z$ are the other two sides.
+Their logarithms sum to $V:=\|v\|_w$, so $2(1-\kappa)H\le V\le2H$.
+Since $\log a\ge(1-\kappa)H>0$, both sides exceed one and $T$ is nonempty.
+As $\sum_{q\in T}\log q\le3x$, a largest coordinate satisfies $H\le3x|v_j|$.
+
+If $v=Dv'$ in $\Lambda(T)$ with $D\ge2$, then $u=\chi(v')$ has
+$u^D=z$ and $\log2\le h(u)=h/D$. Lifting the exponent gives
+$m=v_p(1-u)+v_p(D)$. The numerator and denominator of $u$ differ by at
+most $2\exp(h/D)$, so $m\ell\le h/D+\log2+\log D\le H/2+O(\log H)$,
+contradicting $m\ell\ge(1-2\kappa)H$ for large $x$. Thus $v$ is primitive.
+
+Suppose $0<\|\pi w\|_w<r$. Let $L_1,L_2$ be the successive minima
+of $\Z v+\Z w$. In $(v,w)$ coordinates the norm ball of radius one has area
+\begin{equation}\label{eq:minima}
+ \frac2{V\|\pi w\|_w}\le\mathcal A\le\frac4{L_1L_2}.
+\end{equation}
+It contains the diamond with vertices $\pm v/V$ and
+$\pm(w-(w_j/v_j)v)/\|\pi w\|_w$. The upper bound is Minkowski's
+second theorem at covolume one \cite[p.~2, (2)]{Malikiosis2010}.
+A shortest vector $w_1$ extends to a basis $w_1,w_*$. Write a shortest
+independent vector as $d_1w_1+d_2w_*$. If $|d_2|=1$, it completes the
+basis. Otherwise take $n$ nearest to $d_1/d_2$ to obtain a basis vector
+$w_*+nw_1$ of norm at most $L_2/|d_2|+L_1/2\le L_2$.
+
+Write $v=c_1w_1+c_2w_2$ in this basis of lengths $L_1,L_2$.
+The diamond on $v/V,w_{3-i}/L_{3-i}$ has area
+$2|c_i|/(VL_{3-i})\le\mathcal A$, so $|c_i|L_i\le2V$.
+Each $L_i\ge\ell-\log2\ge\ell/2$, since the unequal numerator and
+denominator of $\chi(w_i)$ are congruent modulo $p$.
+If $c_i=0$, primitivity gives $L_{3-i}=V$, so \eqref{eq:minima}
+would give $L_i<2r<\ell/2$.
+
+Put $b_i=|c_i|>0$, $B_i=2L_i$ and
+$b'=b_1/B_2+b_2/B_1\le2V/(L_1L_2)\le8V/\ell^2$.
+Invert the $\chi(w_i)$ as needed so that $z=\alpha_1^{b_1}/\alpha_2^{b_2}$.
+These are independent rational principal units, with local degree and
+residue order one, $B_i\ge\max(h(\alpha_i),\ell)$ and
+$v_p(\alpha_1^{b_1}-\alpha_2^{b_2})=m$. Bugeaud and Laurent
+\cite[Corollary~2, p.~315]{BL96} give
+\[
+ m\le\frac{24pB_1B_2}{(p-1)\ell^4}
+       \max\{\log(b'\ell)+0.4,10\ell,10\}^2 .
+\]
+The maximum is $10\ell$ since $b'\ell\le16H/\ell$ and
+$\log H<\ell+\sigma x$. Using $p\ge5$, \eqref{eq:minima} and $V\le2H$ gives
+\[
+ Hx/4\le(1-2\kappa)H\ell\le m\ell^2\le3000B_1B_2
+ <48{,}000\,Hr=96{,}000\,Hx/\log x ,
+\]
+contrary to $\log x\ge10^9$.
+\end{proof}
+
+For Lemma~\ref{lem:fresh}, let $p$ be an odd prime divisor of the integer $R>0$.
+Let $T$ be a nonempty subset of the remaining prime divisors of $R$.
+As above $3x=\log R$. Suppose $H>0$, $\log H\ge\lambda x$,
+$(\lambda-6\nu)x\le\ell\le x$. Fix $v\in\Lambda(T)$, $v_j\ne0$ and $h_0>0$.
+Let $V_0$ be the volume of $\sum_{q\ne j}|y_q|\log q<r/2$ in the
+coordinates $(y_q)_{q\in T\setminus\{j\}}$, with $V_0=1$ in dimension zero.
+
+\begin{lemma}\label{lem:fresh}
+For each $k_0\ge0$ and integer $W\ge0$ there is a threshold
+$X=X(\eta,k_0,W)\ge0$. Suppose $x\ge X$ and
+\[
+ H\le3x|v_j|,\quad |v_j|\log2\le h_0,\quad
+ V_0\ge\exp(-7x\log(3\log x)/\log x).
+\]
+Assume the line and projection conclusions of Proposition~\ref{lem:separate}.
+There exist primes $\sqrt M<q_1<q_2\le M$ with $q_1q_2$ coprime to
+$2R$, and $u\in\Lambda(T\cup\{q_1,q_2\})$ having new coordinates $1,-1$.
+Its old coordinates $u_0$ and $\xi=u_j/v_j$ satisfy
+\[
+ \|\pi u_0\|_w<r,\qquad
+ h_0|Q\xi-P|\ge k_0\ell\quad(P,Q\in\Z,\ 1\le Q\le W).
+\]
+The intersection of the enlarged lattice with the real plane spanned
+by $v,u$ is $\Z v+\Z u$. Its character is injective and extends the
+given character on $v$.
+\end{lemma}
+\begin{proof}
+For $p>H$ we have $\log M\le\ell-(\lambda-\nu)x<\ell/2$,
+and for $p\le H$ we have $\log M=\nu x<\ell/2$.
+In both cases $\log M\ge\nu x$ and $MH/p\ge\exp(\nu x)$, with $\nu$ fixed by $\eta$.
+Rosser and Schoenfeld \cite[Corollary~1, (3.5), p.~69]{RS62} give
+more than $M/\log M$ primes up to $M\ge17$. Removing those up to $\sqrt M$
+and the $O(x)$ prime divisors of $2R$ leaves $n\ge M/(4\log M)$ eligible primes.
+
+Set $G=\mathbb F_p^\times/\{\pm1\}$ and let $G_T$ be generated by the classes
+of $T$. The index of $\Lambda(T)$ is $|G_T|$. Extend $v$ to a basis of
+$\Lambda(T)$ and project the other columns along $v$.
+Expansion along coordinate $j$ gives $\pi\Lambda(T)$ covolume $|G_T|/|v_j|$.
+Attach one quotient torus to each coset of $G_T$ in $G$, of total volume
+$\mu=(p-1)/(2|v_j|)$. Fix a representative $g_C$ of each coset $C$.
+For each eligible $q$ in $C$ take $a_q\in\Z^T$ with $[\beta(a_q)]=[q]/g_C$.
+The open ball of radius $r/2$ centered at the class of $\pi a_q$ embeds by
+projection separation. For their multiplicity $f$ and set $E$ of overlapping
+pairs, $\int f=nV_0$, so Cauchy--Schwarz gives
+\[
+ 2|E|V_0\ge\int f(f-1)\ge(nV_0)^2/\mu-nV_0 .
+\]
+Since $|v_j|\ge H/(3x)$ and $V_0\ge\exp(-o(x))$, both $n$ and
+$nV_0/\mu$ exceed $\exp(\nu x-o(x))$. Thus $|E|\ge\exp(2\nu x-o(x))$.
+
+For each overlapping pair $q_1<q_2$ choose $w\in\Lambda(T)$ so that
+$u_0=a_{q_2}-a_{q_1}+w$ has $\|\pi u_0\|_w<r$.
+Its residue class cancels $[q_1]/[q_2]$, so appending $1,-1$ gives $u$
+in the enlarged lattice. The lift need not be unique modulo $\Z v$;
+fix one per pair. Adding $iv$ replaces $\xi$ by $\xi+i$ and $P$ by $P+Qi$.
+
+For each pair failing the slope test choose a witness $P,Q$ and put
+$D=Qu_0-Pv$. Then $|D_j|<k_0\ell/\log2\le k_0x/\log2$.
+Group by $Q,P\bmod Q,D_j$. Relative to one member $D^*$, the vector
+$(D-D^*)/Q$ is integral and vanishes at $j$. Its norm is $<2r$ by projection.
+Its positive and negative exponents encode an ordered pair of positive integers of product
+$\le\exp(2r)$, so the harmonic sum gives at most $\exp(2r)(1+2r)$ choices.
+For fixed $D,Q$, the congruence $(q_1/q_2)^Q\beta(D)\equiv\pm1\bmod p$
+allows at most $2Q$ residue classes of $q_1/q_2$. Each determines the reduced
+fraction since $M^2<p$. Thus at most $O_{k_0,W}((1+x)(1+2r)\exp(2r))
+=\exp(o(x))$ pairs fail for $W>0$ and none for $W=0$.
+Choose a surviving pair. The $q_1$-coordinate of a lattice vector in the
+plane forces its coefficient of $u$ to be integral. Subtraction and the line
+hypothesis give the assertion for $v$. The signed character restricts to
+the original one and is injective by unique factorization.
+\end{proof}

@@ -1,0 +1,47 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{fact}{Fact}
+\renewcommand{\thefact}{F\arabic{fact}}
+\numberwithin{equation}{section}
+\input{notation}
+\title[An upper bound for log c]{An upper bound for log c in the abc conjecture with exponent 2/9}
+\author{Ruiyi Zhang}
+\address{Independent Researcher, Columbia, Maryland, USA}
+\email{ryzfsu@gmail.com}
+\date{November 20, 2026}
+\subjclass[2020]{Primary 11D75; Secondary 11J86}
+\keywords{abc conjecture, radical, logarithmic forms, interpolation determinant}
+\hypersetup{
+  pdfauthor={Ruiyi Zhang},
+  pdftitle={An upper bound for log c in the abc conjecture with exponent 2/9},
+  pdfsubject={MSC 2020: Primary 11D75, Secondary 11J86},
+  pdfkeywords={abc conjecture, radical, logarithmic forms, interpolation determinant}
+}
+\begin{document}
+\begin{abstract}
+Put $R=\rad(abc)$ for positive coprime integers $a+b=c$.
+We obtain $\log c\ll_\eps R^{2/9+\eps}$ for every $\eps>0$.
+A large prime power on the side of least radical determines one rational
+number close to $1$ at its prime. Two auxiliary primes give a second,
+multiplicatively independent number. On their plane a determinant has
+greater divisibility than its row heights allow.
+\end{abstract}
+\maketitle
+\input{sections/S1}
+\input{sections/S2}
+\input{sections/S3}
+\input{sections/S4}
+\input{sections/S5}
+\input{sections/S6}
+\input{sections/S7}
+\input{sections/S8}
+\input{sections/declarations}
+\bibliographystyle{amsplain}
+\bibliography{refs}
+\end{document}

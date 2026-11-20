@@ -1,0 +1,57 @@
+\section{Introduction}
+Put $R=\rad(abc)=\prod_{p\mid abc}p$. The $abc$ conjecture predicts
+$c\ll_\eps R^{1+\eps}$ for positive coprime integers $a+b=c$.
+The conjecture remains open. Stewart and Yu obtained
+$\log c\ll R^{1/3}(\log R)^3$ \cite[Theorem~1]{SY2001}.
+The bound in \cite[Theorem~1, (1.1)]{Zhang2026Third} is
+$\log c\ll R^{1/3}\exp(-\log R/(3000\log\log R))$ for large $R$.
+
+\begin{theorem}\label{thm:main}
+For every real $\eps>0$ there exists $C_\eps>0$ such that
+\[
+                 \log c\le C_\eps R^{2/9+\eps}
+\]
+for all coprime positive integers $a,b$ and $c=a+b$.
+\end{theorem}
+
+Write $H=\log c$. Equation (1.2) of \cite{Zhang2026Third} uses
+$W=\log R$ and $X=R^{1/3}$; here we put $x=W/3$.
+Order the summands as $a\le b$.
+For each $\eta$ as in Section~\ref{sec:cap} we exclude, for large $x$, the range
+\begin{equation}\label{eq:high}
+                     H\ge R^{1/3-\eta}=\exp((1-3\eta)x).
+\end{equation}
+The polynomial bound of Section~\ref{sec:cap} then suffices on bounded $x$.
+
+Let $s$ be a side of least radical. Sections~\ref{sec:real} and
+\ref{sec:small} show that $\log s$ is close to $H$ and that small
+primes contribute little to it. Since $\rad(s)\le\exp(x)$,
+one prime $p$ carries almost all of $H$ in $v_p(s)\log p$
+(Section~\ref{sec:sel}).
+
+The signed ratio of the other sides is $1$ modulo $p^m$, where $m=v_p(s)$.
+Section~\ref{sec:pair} finds an independent rational number congruent to
+$1$ modulo $p$, using two new primes. Put $\ell=\log p$.
+On the plane of their exponents, the height is bounded by
+$g(i,j)=h|i+\xi j|+t|j|$, with $H-\log2\le h\le H$.
+
+Put $\rho=\alpha ht/\ell$. The diamond $g\le\rho$ has area
+$N_0=2\rho^2/(ht)$ and its mean
+height bound is $2\rho/3$. Section~\ref{sec:determinant} constructs a nonzero
+minor of order $N=2K$ from this diamond and a short translate.
+When $N\le3m/2$, the divisibility estimate in that section gives
+\[
+  v_p(\Delta)\ge
+  \min_{0\le y\le K,\; y\in\mathbb R}
+    \big((K-y)4K/3+y^2\big)=8K^2/9=2N^2/9.
+\]
+The minimum occurs at $y=2K/3$. At the level of areas,
+$2N_0\rho/3<2N_0^2\ell/9$ requires $\alpha>3/2$.
+The depth budget at $m=h/\ell$ requires $\alpha^2t/\ell\le3/4$.
+These inequalities allow slack precisely when $t/\ell<1/3$.
+Section~\ref{sec:determinant} obtains $t/\ell<a_0$ with
+$3\eta<a_0<1/3$. Such an interval exists precisely when $\eta<1/9$.
+Section~\ref{sec:end}
+lets $\eta$ approach $1/9$, giving $1/3-1/9=2/9$.
+
+The use of AI tools is described at the end of the paper.

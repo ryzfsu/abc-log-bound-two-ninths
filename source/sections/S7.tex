@@ -1,0 +1,141 @@
+\section{The determinant}\label{sec:determinant}
+\begin{proposition}\label{lem:minor}
+Let $p$ be prime, $K\ge1$, $m\ge0$ integers and $N=2K$. Let
+$\gamma:\Z^2\to\Q^\times$ be a homomorphism into the principal $p$-units
+with $\gamma(1,0)\equiv1\bmod p^m$ and, if $m>0$, $\gamma(1,0)\ne1$.
+Let $F\subset\Z^2$ be finite with at least $N-1$ points and pairwise
+distinct second coordinates. For $w$ with $\gamma(w)\ne1$, put
+$F'=F\cup(F+w)$. At $(i,j)\in F'$ take the two blocks
+$(\binom jk)_{0\le k<K}$ and $(\gamma(i,j)\binom jk)_{0\le k<K}$,
+clearing the row by the positive denominator of $\gamma(i,j)$.
+Suppose $|\binom jk|\le B$ throughout and every $N$ distinct sites in
+$F'$ have sum of heights at most $U$. There is a nonzero integer
+$N$-row minor $\Delta$ satisfying
+\begin{equation}\label{eq:both}
+ \begin{split}
+ \log|\Delta|&\le U+\log(N!)+N\log B,\\
+ 4K\le3m\quad&\Longrightarrow\quad \log|\Delta|\ge\tfrac29 N^2\log p .
+ \end{split}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Rank failure gives a relation $P(j)+\gamma(i,j)Q(j)=0$ on $F'$ with
+$P,Q$ of degree $<K$, not both zero. Since $F$ has at least $K$ distinct
+second coordinates, both polynomials are nonzero. Elimination at each
+point of $F$ and its translate gives $2K-1$ distinct roots of
+$P(L+w_2)Q(L)-\gamma(w)P(L)Q(L+w_2)$. Its degree is at most $2K-2$ and
+its leading coefficient is $(1-\gamma(w))\operatorname{lc}(P)\operatorname{lc}(Q)\ne0$.
+Thus a nonzero minor $\Delta$ exists. Its row entries are bounded by
+$B\exp h(\gamma(i,j))$, so determinant expansion gives the upper bound.
+
+Work in $\Z_p$ and put $z_0=\gamma(1,0)$, $z_1=\gamma(0,1)$.
+At positive depth, $z_0\ne1$ gives a finite valuation of $1-z_0$. Row denominators are
+$p$-adic units. Translating the sites into the nonnegative quadrant
+preserves the valuation, since binomial translation is unipotent and
+the character gains a fixed $p$-unit. Modulo $p^m$ the second block has
+entries $z_1^j\binom jk$. Expand $z_1^j=\sum_b\binom jb(z_1-1)^b$,
+a finite sum on these rows. Counting pairs of subsets by their union
+expresses $\binom jk\binom jb$ as an integral combination of
+$\binom jn$ with $n\le k+b$. Thus the coefficient of $\binom jn$ in
+column $k$ is divisible by $p^{\max(0,n-k)}$.
+
+In a multilinear term with $d$ expanded columns the other $K-d$
+columns contribute errors divisible by $p^m$. The first block forces
+the surviving $n$'s to be distinct and at least $K$. Their sum exceeds
+that of the $d$ distinct $k<K$ by at least
+$\sum_{i=0}^{d-1}[(K+i)-(K-d+i)]=d^2$. Hence
+$v_p(\Delta)\ge\min_{0\le d\le K}((K-d)m+d^2)$.
+If $m\ge4K/3$, each term is at least
+$(d-2K/3)^2+8K^2/9\ge2N^2/9$. Now $\log|\Delta|\ge v_p(\Delta)\log p$.
+\end{proof}
+
+\begin{lemma}\label{lem:diamond}
+For each admissible $\eta,\sigma,\kappa$ there exists $X\ge0$ such that
+every triple in $\mathcal B_X$ has a prime $p\mid s$ above $Y$ and data
+as in Proposition~\ref{lem:minor} with $m=v_p(s)$ and
+\begin{equation}\label{eq:budget}
+           4K\le3m,\qquad U+\log(N!)+N\log B<\tfrac29 N^2\ell .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Take $p,v,j$ from Proposition~\ref{lem:separate}. Since
+$1-3a_0=(1-9\eta)/2>2\kappa$, the choice of $\theta$ in
+Table~\ref{tab:parameters} is possible. Choose $0<Z<1$ with
+\begin{equation}\label{eq:slack}
+ \frac{(1+Z)(1+2Z)^2-1/3}{3(1+\theta)(1-Z)^4}<\frac29 .
+\end{equation}
+At $Z=0$ the left side is $2/[9(1+\theta)]$.
+
+Apply Lemma~\ref{lem:fresh} with $h_0=h$, since $|v_j|\log 2\le h$.
+For $d_0=|T|-1>0$, the arithmetic--geometric mean inequality and
+$\sum_{q\in T}\log q\le3x$ give
+$V_0=r^{d_0}/(d_0!\prod_{q\ne j}\log q)\ge(r/(3x))^{d_0}$.
+The product of these $d_0$ primes lies between $(d_0+1)!$ and $R$, so
+$(d_0+1)\log(d_0+1)-d_0\le3x$ by integrating $\log y$.
+Thus $d_0\le7x/\log x$ for large $x$. With $r/(3x)=2/(3\log x)$
+this gives the required volume bound, also valid when $d_0=0$ and $V_0=1$.
+
+On the resulting plane put $\gamma(i,j')=\chi(iv+j'u)$. Then
+\begin{equation}\label{eq:plane-height}
+ t=\|\pi u_0\|_w+\log q_2,\qquad
+ h(\gamma(i,j'))\le g(i,j'):=h|i+\xi j'|+t|j'|.
+\end{equation}
+Indeed the height norm is the larger of the positive and negative
+weighted exponent sums. For $u-\xi v$ each sum is at most $t$, since
+the new coordinates have opposite signs. The principal-unit character
+$\gamma$ is injective and $\gamma(1,0)=z\ne1$ has $v_p(1-z)=m$.
+We have $t>b_0\ell$ since $q_2>\sqrt M\ge\exp(\nu x/2)$.
+For large $x$, $r=2x/\log x<\nu x$, so $t<\nu x+\log M$. For $p\ge H$ this is at most
+$\ell-(\lambda-2\nu)x\le(3\eta+2\nu)\ell$, and for $p<H$ it is
+$2\nu x\le4\nu\ell$. Both bounds are $<a_0\ell$.
+
+The $g$-ball of radius $y$ has area $Ay^2$. A nonzero $(-P,Q)$ has
+length at least $h$ for $Q=0$, at least $k_0\ell$ for $1\le|Q|\le W$
+by the slope inequality, and greater than $Wb_0\ell$ otherwise.
+Each exceeds $2ht/\delta=2\ell/(Z\alpha)$ for large $x$, since
+$k_0,Wb_0>2/(Z\alpha)$ and $h\ge\log b\ge H-\log2$ gives $h/\ell\to\infty$ uniformly.
+Minkowski's second theorem bounds the product of the successive minima
+by $4/A=2ht$, so the second minimum is at most $\delta$.
+Proposition~\ref{lem:separate}'s basis argument gives a basis in $g\le\delta$.
+
+A centered unit-area cell of this basis lies in $g\le\delta$.
+Translating cells gives the bounds for $C(y)=\#\{n\in\Z^2:g(n)\le y\}$,
+\begin{equation}\label{eq:count}
+           A(y-\delta)_+^2\le C(y)\le A(y+\delta)^2 .
+\end{equation}
+Take $F=\{g\le\rho\}\cap\Z^2$ and a basis vector $w$. Then
+$\gamma(w)\ne1$ and $|F|\ge(1-Z)^2N_0\ge2K-1$.
+Two distinct sites of $F$ with the same second coordinate would differ
+by a vector of length at least $h>2\rho$, since $2\alpha a_0<1$.
+Further, $N_0=2\alpha^2ht/\ell^2\to\infty$ uniformly. Since $h\le H$,
+\[
+ 2N_0\ell\le4\alpha^2a_0 h<3(1-2\kappa)h\le3m\ell .
+\]
+The strict coefficient gap and $N=(1-Z)^2N_0+O(1)$ give $4K\le3m$.
+
+All sites of $F'$ lie in $g\le\rho_1$, so $|j'|\le\rho_1/t$ and
+$|\binom{j'}k|\le B$, using $|\binom{-n}k|=\binom{n+k-1}k$ for $n\ge1$.
+By \eqref{eq:plane-height} each $N$-row height sum is at most
+\[
+ \begin{aligned}
+ \sum_{g(n)\le\rho_1}g(n)
+ &=\int_0^{\rho_1}\bigl(C(\rho_1)-C(y)\bigr)\,dy\\
+ &\le A\bigl[\rho_1(\rho_1+\delta)^2-(\rho_1-\delta)^3/3\bigr]=:U
+ \end{aligned}
+\]
+by \eqref{eq:count}. Since $\rho_1=(1+Z)\rho$ and $N_0\ell=3(1+\theta)\rho$,
+$U/(N^2\ell)$ equals the left side of \eqref{eq:slack} plus $o(1)$ uniformly.
+Also $t\ge b_0\ell$ gives $\rho_1/t=O(N)$, so $\log B=O(N)$.
+Since $\log N\le N$, also $\log(N!)\le N^2$. The remaining normalized cost is
+$O(1/\ell)$, which fits the strict margin in \eqref{eq:slack}.
+\end{proof}
+
+\begin{lemma}\label{lem:empty}
+Assume the conclusion of Lemma~\ref{lem:diamond}. For each admissible
+$\eta,\sigma,\kappa$ there exists $X\ge0$ with $\mathcal B_X=\varnothing$.
+\end{lemma}
+\begin{proof}
+At the threshold of Lemma~\ref{lem:diamond}, a triple in $\mathcal B_X$
+would yield a minor with $\tfrac29N^2\ell\le\log|\Delta|<\tfrac29N^2\ell$
+by \eqref{eq:both} and \eqref{eq:budget}.
+\end{proof}

@@ -1,0 +1,7 @@
+/.lake/
+/verification/source-sha256.txt
+/verification/build.txt
+/verification/axioms.txt
+/verification/challenge.txt
+/verification/statement-identity.json
+/verification/build-after-challenge.txt

@@ -1,0 +1,29 @@
+\section{A polynomial bound}\label{sec:cap}
+\begin{proposition}\label{lem:cap}
+There are real numbers $C_0>0$ and $k\ge0$ such that $H\le C_0R^k$
+for every triple.
+\end{proposition}
+\begin{fact}[{\cite[Fact F1, (2.1)]{Zhang2026Third}}]\label{fact:sy}
+For $c>2$ one has $H\le C_1 R^{1/3}(\log R)^3$ with absolute $C_1$.
+\end{fact}
+\begin{proof}[Proof of Proposition~\ref{lem:cap}]
+Apply Fact~\ref{fact:sy} with the radical of the three pairwise coprime sides.
+Since $\log R\le R$, $k=20$ and $C_0=\max(1,C_1)$ suffice, including $(1,1,2)$.
+\end{proof}
+
+Fix a rational $\eta$ in $(0,1/9)$ and use Table~\ref{tab:parameters}.
+Choose the first of $a,b,c$ having least radical and denote it by $s$.
+Define $z=c/b,c/a,-a/b$, respectively, when $s=a,b,c$.
+These are the ratios in \cite[(3.4)]{Zhang2026Third}, inverted in the first two cases.
+For $q\mid s$ they are $q$-units, so inversion preserves $v_q(1-z)=v_q(s)$.
+Use the normalizations of \cite[\S2]{Zhang2026Third}, with $v_q(q)=1$.
+For $n/d$ in lowest terms with $d>0$ put
+$h(n/d)=\log\max(|n|,d)$ and write $h=h(z)$.
+Set
+\[
+  S(s,Y)=\sum_{\substack{q\mid s,\ q\le Y\\q\ {\rm prime}}}v_q(s)\log q .
+\]
+For the prime $p$ of Section~\ref{sec:sel} put $\ell=\log p$ and $m=v_p(s)$.
+The length $t$ in Table~\ref{tab:parameters} is defined in
+\eqref{eq:plane-height}. All logarithms are natural.
+\parameters
