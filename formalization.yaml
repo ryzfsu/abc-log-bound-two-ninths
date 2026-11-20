@@ -20,11 +20,12 @@ classification:
 sources:
   - title: "An upper bound for log c in the abc conjecture with exponent 2/9"
     authors: ["Ruiyi Zhang"]
+    id: "https://doi.org/10.5281/zenodo.24405683"
     type: "paper"
     license: "CC-BY-4.0"
-    location: "https://github.com/ryzfsu/abc-log-bound-two-ninths/blob/main/main.pdf"
+    location: "https://zenodo.org/records/24405684"
     relationship: "formalizes"
-    note: "Theorem 1.1 of the companion manuscript. The citation identifier is pending publication."
+    note: "The paper is published on Zenodo; the main result is Theorem 1.1."
     author_endorsement: "participated"
 
 related_formalizations: []
