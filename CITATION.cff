@@ -1,17 +1,25 @@
 cff-version: 1.2.0
-message: "Please cite the paper by its title and author."
-type: dataset
+message: "If you use this work, please cite it as below."
 title: "An upper bound for log c in the abc conjecture with exponent 2/9"
-repository-code: "https://github.com/ryzfsu/abc-log-bound-two-ninths"
 authors:
   - family-names: Zhang
     given-names: Ruiyi
+    affiliation: Independent Researcher
     orcid: "https://orcid.org/0009-0003-3110-8524"
+doi: 10.5281/zenodo.24405683
+url: "https://doi.org/10.5281/zenodo.24405683"
+repository-code: "https://github.com/ryzfsu/abc-log-bound-two-ninths"
+date-released: 2026-11-20
 preferred-citation:
-  type: unpublished
+  type: article
   title: "An upper bound for log c in the abc conjecture with exponent 2/9"
   authors:
     - family-names: Zhang
       given-names: Ruiyi
+      affiliation: Independent Researcher
       orcid: "https://orcid.org/0009-0003-3110-8524"
   year: 2026
+  publisher:
+    name: Zenodo
+  doi: 10.5281/zenodo.24405683
+  url: "https://doi.org/10.5281/zenodo.24405683"

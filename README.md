@@ -2,7 +2,7 @@
 
 Ruiyi Zhang
 
-DOI: [DOI pending]
+DOI: [10.5281/zenodo.24405683](https://doi.org/10.5281/zenodo.24405683)
 
 For positive coprime integers $a+b=c$, put $R=\operatorname{rad}(abc)$.
 Theorem 1.1 gives $\log c\ll_\varepsilon R^{2/9+\varepsilon}$ for every
@@ -39,13 +39,16 @@ is licensed under Apache 2.0. See [LICENSE.md](LICENSE.md) for details.
 
 ## Citation
 
-Ruiyi Zhang, “An upper bound for log c in the abc conjecture with
-exponent 2/9,” preprint, 2026.
+Ruiyi Zhang, *An upper bound for log c in the abc conjecture with exponent 2/9*, preprint, Zenodo, 2026. https://doi.org/10.5281/zenodo.24405683
 
 ```bibtex
 @misc{zhang2026twoninths,
-  author = {Zhang, Ruiyi},
-  title = {An upper bound for log c in the abc conjecture with exponent 2/9},
-  year = {2026}
+  author    = {Zhang, Ruiyi},
+  title     = {An upper bound for $\log c$ in the $abc$ conjecture with exponent $2/9$},
+  year      = {2026},
+  publisher = {Zenodo},
+  note      = {Preprint},
+  doi       = {10.5281/zenodo.24405683},
+  url       = {https://doi.org/10.5281/zenodo.24405683}
 }
 ```
