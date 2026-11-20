@@ -4,7 +4,7 @@ Ruiyi Zhang
 
 DOI: [10.5281/zenodo.24405683](https://doi.org/10.5281/zenodo.24405683)
 
-For positive coprime integers $a+b=c$, put $R=\operatorname{rad}(abc)$.
+For positive coprime integers $a+b=c$, put $R=\mathrm{rad}(abc)$.
 Theorem 1.1 gives $\log c\ll_\varepsilon R^{2/9+\varepsilon}$ for every
 $\varepsilon>0$.
 
