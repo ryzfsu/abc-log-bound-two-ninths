@@ -4,6 +4,8 @@ Ruiyi Zhang
 
 DOI: [10.5281/zenodo.24405683](https://doi.org/10.5281/zenodo.24405683)
 
+Lean (Palomar): [PALOMAR-2026-11-20-000025](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-20-000025)
+
 For positive coprime integers $`a+b=c`$, put $`R=\mathrm{rad}(abc)`$.
 Theorem 1.1 gives $`\log\, c\ll_\varepsilon R^{2/9+\varepsilon}`$ for every
 $`\varepsilon>0`$.
@@ -17,7 +19,9 @@ $`\varepsilon>0`$.
 
 The Lean 4 formalization of Theorem 1.1 is in [lean/](lean/). The same tree
 is at the root of the [palomar](https://github.com/ryzfsu/abc-log-bound-two-ninths/tree/palomar)
-branch. The main declaration, `AbcTwoNinths.twoNinths`, proves this statement:
+branch. The Palomar registry entry [PALOMAR-2026-11-20-000025](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-20-000025)
+registers the palomar branch commit e10c67b33dda8d5c97d6f275d9644a3be7438ee2, whose Lean files are
+identical to lean/ here. The main declaration, `AbcTwoNinths.twoNinths`, proves this statement:
 
 ```lean
 def twoNinthsStatement : Prop :=
