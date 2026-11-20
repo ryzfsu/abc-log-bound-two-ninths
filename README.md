@@ -4,9 +4,9 @@ Ruiyi Zhang
 
 DOI: [10.5281/zenodo.24405683](https://doi.org/10.5281/zenodo.24405683)
 
-For positive coprime integers $a+b=c$, put $R=\mathrm{rad}(abc)$.
-Theorem 1.1 gives $\log c\ll_\varepsilon R^{2/9+\varepsilon}$ for every
-$\varepsilon>0$.
+For positive coprime integers $`a+b=c`$, put $`R=\mathrm{rad}(abc)`$.
+Theorem 1.1 gives $`\log\, c\ll_\varepsilon R^{2/9+\varepsilon}`$ for every
+$`\varepsilon>0`$.
 
 ## Contents
 
@@ -44,7 +44,7 @@ Ruiyi Zhang, *An upper bound for log c in the abc conjecture with exponent 2/9*,
 ```bibtex
 @misc{zhang2026twoninths,
   author    = {Zhang, Ruiyi},
-  title     = {An upper bound for $\log c$ in the $abc$ conjecture with exponent $2/9$},
+  title     = {An upper bound for $\log\, c$ in the $abc$ conjecture with exponent $2/9$},
   year      = {2026},
   publisher = {Zenodo},
   note      = {Preprint},
